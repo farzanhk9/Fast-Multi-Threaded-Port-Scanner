@@ -4,11 +4,11 @@ from queue import Queue
 
 print_lock = threading.Lock()
 
-def scan_port(target, poort):
+def scan_port(target, port):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(1)
-        result = s.connect_ex((target, poort))
+        result = s.connect_ex((target, port))
         if result == 0:
             with print_lock:
                 print(f"[OPEN] Port {port}")
