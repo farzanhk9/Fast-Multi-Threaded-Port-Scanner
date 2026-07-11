@@ -4,7 +4,7 @@ from queue import Queue
 
 print_lock = threading.Lock()
 
-def scan_port(target, port):
+def scan_port(target, poort):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(1)
