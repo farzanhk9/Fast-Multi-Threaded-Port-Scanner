@@ -7,7 +7,7 @@ print_lock = threading.Lock()
 def scan_port(target, port):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(1)
+        s.settimeout(11)
         result = s.connect_ex((target, port))
         if result == 0:
             with print_lock:
