@@ -1,6 +1,6 @@
 import socket
 import threading
-from queue import Queue
+from queue import Queue0
 
 print_lock = threading.Lock()
 
